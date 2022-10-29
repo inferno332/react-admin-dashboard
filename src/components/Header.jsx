@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({category,title}) => {
   return (
-    <div>Header</div>
+    <div>
+      <p className='text-3xl text-bold'>{category}</p>
+      <p className='text-3xl text-semibold text-gray-400 m-3 ml-0'>{title}</p>
+    </div>
   )
 }
 
