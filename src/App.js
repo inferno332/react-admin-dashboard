@@ -30,7 +30,7 @@ const App = () => {
     return (
         <div>
             <BrowserRouter>
-                <div className="flex relavtive dark:bg-main-dark">
+                <div className="flex relavtive dark:bg-main-dark bg-light-gray">
                     <div className="fixed right-4 bottom-4 z-1000 ">
                         <TooltipComponent content="Settings" position="Top">
                             <button
@@ -61,34 +61,34 @@ const App = () => {
                         <div className="fixed md:static bg-main dark:bg-main-dark navbar w-full">
                             <Navbar />
                         </div>
-                    </div>
 
-                    <div>
-                        <Routes>
-                            {/* DASHBOARD */}
-                            <Route path="/" element={<Ecommerce />} />
-                            <Route path="/ecommerce" element={<Ecommerce />} />
+                        <div>
+                            <Routes>
+                                {/* DASHBOARD */}
+                                <Route path="/" element={<Ecommerce />} />
+                                <Route path="/ecommerce" element={<Ecommerce />} />
 
-                            {/* PAGES */}
-                            <Route path="/orders" element={<Orders />} />
-                            <Route path="/employees" element={<Employees />} />
-                            <Route path="/customers" element={<Customers />} />
+                                {/* PAGES */}
+                                <Route path="/orders" element={<Orders />} />
+                                <Route path="/employees" element={<Employees />} />
+                                <Route path="/customers" element={<Customers />} />
 
-                            {/* APPS */}
-                            <Route path="/kanban" element={<Kanban />} />
-                            <Route path="/editor" element={<Editor />} />
-                            <Route path="/calendar" element={<Calendar />} />
+                                {/* APPS */}
+                                <Route path="/kanban" element={<Kanban />} />
+                                <Route path="/editor" element={<Editor />} />
+                                <Route path="/calendar" element={<Calendar />} />
 
-                            {/* CHARTS */}
-                            <Route path="/line" element={<Line />} />
-                            <Route path="/area" element={<Area />} />
-                            <Route path="/bar" element={<Bar />} />
-                            <Route path="/pie" element={<Pie />} />
-                            <Route path="/financial" element={<Financial />} />
-                            <Route path="/color-mapping" element={<ColorMapping />} />
-                            <Route path="/pyramid" element={<Pyramid />} />
-                            <Route path="/stacked" element={<Stacked />} />
-                        </Routes>
+                                {/* CHARTS */}
+                                <Route path="/line" element={<Line />} />
+                                <Route path="/area" element={<Area />} />
+                                <Route path="/bar" element={<Bar />} />
+                                <Route path="/pie" element={<Pie />} />
+                                <Route path="/financial" element={<Financial />} />
+                                <Route path="/color-mapping" element={<ColorMapping />} />
+                                <Route path="/pyramid" element={<Pyramid />} />
+                                <Route path="/stacked" element={<Stacked />} />
+                            </Routes>
+                        </div>
                     </div>
                 </div>
             </BrowserRouter>

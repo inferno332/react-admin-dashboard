@@ -44,7 +44,7 @@ module.exports = {
                 1000: '1000',
             },
             backgroundImage: {
-                'hero-pattern': "url('https://i.ibb.co/MkvLDfb/Rectangle-4389.png')",
+                'hero-pattern': "url('https://www.pngitem.com/pimgs/m/27-276517_magento-ecommerce-web-development-banner-hd-png-download.png')",
             },
         },
     },
