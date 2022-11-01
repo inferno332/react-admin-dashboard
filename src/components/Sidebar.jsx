@@ -9,11 +9,12 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 const Sidebar = () => {
     const {activeMenu,setActiveMenu,screenSize} = useStateContext()
-
+    console.log(screenSize)
     const handleCloseSideBar = () => {
         if(activeMenu && screenSize <= 900) {
             setActiveMenu(false)
         }
+        return null
     }
 
     const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md m-2 bg-gray-300';
