@@ -6,7 +6,7 @@ function Grid({ columns, data, }) {
     const [pageSize, setPageSize] = useState(5);
   
     return (
-        <div className="mb-10">
+        <div>
             <Box>
                 <Box
                     m="20px"

@@ -111,12 +111,13 @@ const Orders = () => {
             renderCell: ({ row: { access } }) => {
                 return (
                     <Box
-                        width="60%"
+                        width="100%"
                         p="5px"
                         display="flex"
                         justifyContent="center"
-                        backgroundColor={access === 'admin' ? '#6bba7e' : '#2e7c67'}
+                        backgroundColor={access === 'admin' ? '#3cda61' : '#8d3333'}
                         borderRadius="4px"
+                        overflow='hidden'
                     >
                         {access === 'admin' && <AdminPanelSettingsOutlined />}
                         {access === 'manager' && <SecurityOutlined />}
@@ -132,7 +133,7 @@ const Orders = () => {
 
 
     return (
-        <div>
+        <div className='m-2 md:m-10 mt-24 p-2 lg:p-10 bg-white rounded-3xl' >
             <Header category="Page" title="Orders" />
             <Grid columns={columns} data={mockDataTeam}/>
         </div>

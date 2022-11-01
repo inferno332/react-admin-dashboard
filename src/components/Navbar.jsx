@@ -24,7 +24,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 );
 
 const Navbar = () => {
-    const { activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setScreenSize } =
+    const { activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setScreenSize,currentColor } =
         useStateContext();
 
     useEffect(() => {
@@ -35,6 +35,7 @@ const Navbar = () => {
         handleResize();
 
         return () => window.removeEventListener('resize', handleResize);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
@@ -43,6 +44,7 @@ const Navbar = () => {
         } else {
             setActiveMenu(true);
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [screenSize]);
 
     return (
@@ -51,7 +53,7 @@ const Navbar = () => {
                 title="Menu"
                 customFunc={() => setActiveMenu((prev) => !prev)}
                 icon={<AiOutlineMenu />}
-                color="blue"
+                color={currentColor}
             />
 
             <div className="flex">
@@ -60,21 +62,21 @@ const Navbar = () => {
                     customFunc={() => handleClick('cart')}
                     icon={<FiShoppingCart />}
                     dotColor="#03c9d7"
-                    color="blue"
+                    color={currentColor}
                 />
                 <NavButton
                     title="Cart"
                     customFunc={() => handleClick('chat')}
                     icon={<BsChatLeft />}
                     dotColor="#03c9d7"
-                    color="blue"
+                    color={currentColor}
                 />
                 <NavButton
                     title="Notifications"
                     customFunc={() => handleClick('notification')}
                     icon={<RiNotification3Line />}
                     dotColor="#03c9d7"
-                    color="blue"
+                    color={currentColor}
                 />
 
                 <TooltipComponent content="Profile" position="BottomCenter">
